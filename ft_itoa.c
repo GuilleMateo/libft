@@ -44,7 +44,8 @@ char
 	size_t	length;
 
 	is_neg = (n < 0);
-	if (!(str = ft_calloc(11 + is_neg, sizeof(*str))))
+	str = ft_calloc(11 + is_neg, sizeof(*str)
+	if (!str)
 		return (NULL);
 	if (n == 0)
 		str[0] = '0';
